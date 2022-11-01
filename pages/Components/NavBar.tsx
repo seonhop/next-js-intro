@@ -7,11 +7,24 @@ export default function NavBar() {
 	return (
 		<nav className={styles.nav}>
 			<Link href="/">
-				<span className={`${styles.active} ${styles.link}`}>Home</span>
+				<span className={router.pathname === "/" ? "active" : ""}>Home</span>
 			</Link>
 			<Link href="/about">
-				<span className={[styles.active, styles.link].join(" ")}>About</span>
+				<span className={router.pathname === "/about" ? "active" : ""}>
+					About
+				</span>
 			</Link>
+			<style jsx>{`
+				nav {
+					background-color: tomato;
+				}
+				a {
+					text-decoration: none;
+				}
+				.active {
+					color: blue;
+				}
+			`}</style>
 		</nav>
 	);
 }
