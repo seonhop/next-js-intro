@@ -1,0 +1,13 @@
+.nav {
+	display: flex;
+	justify-content: center;
+	background-color: tomato;
+}
+
+.active {
+	background-color: white;
+}
+
+.link {
+	color: blue;
+}
